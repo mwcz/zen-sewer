@@ -11,6 +11,29 @@
     <meta name="author" content="Satan">
     <meta name="description" content="A  of what can be destroyed visually through CSS-based design.">
     <meta name="robots" content="all">
+
+    <script type="module">
+        import Stats from "https://cdnjs.cloudflare.com/ajax/libs/stats.js/r17/Stats.min.js";
+        const stats = new Stats();
+        stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+        document.body.appendChild( stats.dom );
+
+        function animate() {
+
+	        stats.begin();
+
+stats.showPanel(0);
+	        // monitored code goes here
+
+	        stats.end();
+
+	        requestAnimationFrame( animate );
+
+        }
+
+        requestAnimationFrame( animate );
+    </script>
+
 </head>
 
 <body id="css-zen-garden">
